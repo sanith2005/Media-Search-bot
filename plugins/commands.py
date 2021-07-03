@@ -14,8 +14,7 @@ async def start(bot, message):
     if len(message.command) > 1 and message.command[1] == 'subscribe':
         await message.reply(INVITE_MSG)
     else:
-        buttons = [
-    [
+buttons = [
         InlineKeyboardButton(
             text='➕️ Add Me 🔘', url='t.me/SenkuRoBot?startgroup=true'),
     ],
