@@ -20,10 +20,6 @@ buttons = [[
             text='➕️ Add Me 🔘', url='t.me/SenkuRoBot?startgroup=true'),
     ]],
     [[
-        InlineKeyboardButton(text='Search Here', switch_inline_query_current_chat=''),
-        InlineKeyboardButton(text='Go Inline', switch_inline_query=''),
-    ]],
-    [[
         InlineKeyboardButton(
             text='💾 Source', callback_data='source_'),
         InlineKeyboardButton(
