@@ -15,6 +15,7 @@ async def start(bot, message):
         await message.reply(INVITE_MSG)
     else:
 buttons = [
+    [   
         InlineKeyboardButton(
             text='➕️ Add Me 🔘', url='t.me/SenkuRoBot?startgroup=true'),
     ],
@@ -29,7 +30,7 @@ buttons = [
             text='🔔 News', url='https://t.me/SenkuNews'
         ),
     ],
-
+]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
