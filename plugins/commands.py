@@ -20,8 +20,8 @@ async def start(bot, message):
             text="➕️ Add Me 🔘", url="t.me/SenkuRoBot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Search Here", switch_inline_query_current_chat=''),
-        InlineKeyboardButton(text="Go Inline", switch_inline_query=''),
+        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
+        InlineKeyboardButton("Go Inline", switch_inline_query=''),
     ],
     [
         InlineKeyboardButton(
