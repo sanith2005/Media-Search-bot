@@ -17,17 +17,17 @@ async def start(bot, message):
         buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add Me 🔘", url="t.me/SenkuRoBot?startgroup=true"),
+            text='➕️ Add Me 🔘', url='t.me/SenkuRoBot?startgroup=true'),
     ],
     [
-        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-        InlineKeyboardButton("Go Inline", switch_inline_query=''),
+        InlineKeyboardButton(text='Search Here', switch_inline_query_current_chat=''),
+        InlineKeyboardButton(text='Go Inline', switch_inline_query=''),
     ],
     [
         InlineKeyboardButton(
-            text="💾 Source", callback_data="source_"),
+            text='💾 Source', callback_data='source_'),
         InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/SenkuNews"
+            text='🔔 News', url='https://t.me/SenkuNews'
         ),
     ],
 
