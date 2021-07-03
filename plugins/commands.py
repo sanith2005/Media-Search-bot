@@ -17,8 +17,8 @@ async def start(bot, message):
         buttons = [[
             InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Go Inline', switch_inline_query=''),
-        ]]
-        buttons = [[
+        ]],
+        [[
             InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
             InlineKeyboardButton('Go Inline', switch_inline_query=''),
         ]]
