@@ -52,13 +52,13 @@ async def channel_info(bot, message):
         os.remove(file)
 
 
-@Client.on_message(filters.command('total') & filters.user(ADMINS))
+@Client.on_message(filters.command('total'))
 async def total(bot, message):
     """Show total files in database"""
-    msg = await message.reply("Processing...⏳", quote=True)
+    msg = await message.reply("Processing . . .", quote=True)
     try:
         total = await Media.count_documents()
-        await msg.edit(f'📁 Saved files: {total}')
+        await msg.edit(f'{total} Episodes Were Available.')
     except Exception as e:
         logger.exception('Failed to check total files')
         await msg.edit(f'Error: {e}')
