@@ -15,18 +15,9 @@ async def start(bot, message):
         await message.reply(INVITE_MSG)
     else:
 buttons = [[
-    [[   
-        InlineKeyboardButton(
-            text='➕️ Add Me 🔘', url='t.me/SenkuRoBot?startgroup=true'),
-    ]],
-    [[
-        InlineKeyboardButton(
-            text='💾 Source', callback_data='source_'),
-        InlineKeyboardButton(
-            text='🔔 News', url='https://t.me/SenkuNews'
-        ),
-    ]],
-]]
+            InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('Go Inline', switch_inline_query=''),
+        ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
