@@ -34,7 +34,33 @@ def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
+    
+@Client.on_message(filters.command(["channel"]))
+def help_user(bot, update):
 
+    bot.send_message(
+        chat_id=update.chat.id,
+        text='Join our Channel. . .',
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Now", url="https://t.me/SBS_Studio")]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+    
+    
+@Client.on_message(filters.command(["commands"]))
+def help_user(bot, update):
+
+    bot.send_message(
+        chat_id=update.chat.id,
+        text='/start - Restart bot & serach. \n/repo - to get bot technology. \n/channel - Join Our Channel \n\n Powered By @SBS_Studio',
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Our Channel", url="https://t.me/SBS_Studio")]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
+    
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
     """Send basic information of channel"""
