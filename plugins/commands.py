@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 async def start(bot, message):
     """Start command handler"""
     if len(message.command) > 1 and message.command[1] == 'subscribe':
-        await message.reply(INVITE_MSG)
+        await message.reply('⚠️ You are not Subscribed @SBS_Studio. \n\nPlease Join @SBS_Studio channel')
     else:
         buttons = [[
             InlineKeyboardButton('Search Here 🔎', switch_inline_query_current_chat=''),
