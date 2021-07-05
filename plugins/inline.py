@@ -72,10 +72,24 @@ async def answer(bot, query):
 
 def get_reply_markup(username, query):
     url = 't.me/share/url?url=' + quote(SHARE_BUTTON_TEXT.format(username=username))
-    buttons = [[
-        InlineKeyboardButton('Search again', switch_inline_query_current_chat=query),
-        InlineKeyboardButton('Share bot', url=url),
-    ]]
+    buttons = [
+    [
+        InlineKeyboardButton(
+            text="Search again", switch_inline_query_current_chat=query),
+    ],
+    [
+        InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
+        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="💾 Source", callback_data="source_"),
+        InlineKeyboardButton(
+            text="🔔 News", url="https://t.me/SenkuNews"
+        ),
+    ],
+]
+    
     return InlineKeyboardMarkup(buttons)
 
 
