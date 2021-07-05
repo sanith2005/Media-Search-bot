@@ -20,20 +20,7 @@ async def start(bot, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
-        
-
-@Client.on_message(filters.command(["repo"]))
-def help_user(bot, update):
-
-    bot.send_message(
-        chat_id=update.chat.id,
-        text='Are you want to create like this bot(Media Search bot) ?? \n\nPlease Tap Clone Button...',
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Clone", url="https://github.com/SBSstudio/Tg-Inline_media-search-bot")]]),
-        parse_mode="html",
-        disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
-    )
-
+       
     
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
