@@ -75,18 +75,11 @@ def get_reply_markup(username, query):
     buttons = [
     [
         InlineKeyboardButton(
-            text="Search again", switch_inline_query_current_chat=query),
+            text="Search again 👆", switch_inline_query_current_chat=query),
     ],
     [
-        InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="💾 Source", callback_data="source_"),
-        InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/SenkuNews"
-        ),
+        InlineKeyboardButton(text="Channel 🗣", url="https://t.me/SBS_Studio"),
+        InlineKeyboardButton(text="Rate ⭐️", url="https://t.me/tlgrmcbot?start=mykdrama_bot-review"),
     ],
 ]
     
