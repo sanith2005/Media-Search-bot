@@ -35,7 +35,7 @@ def help_user(bot, update):
     )
 
     
-@Client.on_message(filters.command(["channel"]))
+@Client.on_message(filters.command(["join"]))
 def help_user(bot, update):
 
     bot.send_message(
