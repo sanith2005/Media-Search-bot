@@ -20,6 +20,19 @@ async def start(bot, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(START_MSG, reply_markup=reply_markup)
+        
+
+@Client.on_message(filters.command(["help"]))
+def help_user(bot, update):
+
+    bot.send_message(
+        chat_id=update.chat.id,
+        text=script.'hello',
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
