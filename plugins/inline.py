@@ -44,7 +44,7 @@ async def answer(bot, query):
             InlineQueryResultCachedDocument(
                 title=file.file_name,
                 file_id=file.file_id,
-                caption="Upload From @myKdrama_bot.",
+                caption="💎Upload From:- @myKdrama_bot \n\n〽️Mixed English Subtitles〽️",
                 description=f'Size: {get_size(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup))
 
@@ -80,6 +80,9 @@ def get_reply_markup(username, query):
     [
         InlineKeyboardButton(text="Channel 🗣", url="https://t.me/SBS_Studio"),
         InlineKeyboardButton(text="Rate ⭐️", url="https://t.me/tlgrmcbot?start=mykdrama_bot-review"),
+    ],
+    [
+        InlineKeyboardButton(text="Download Subtitles 🎦", url="https://t.me/TGsubtitledownloadebot"),
     ],
 ]
     
