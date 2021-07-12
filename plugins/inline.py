@@ -79,7 +79,6 @@ def get_reply_markup(username, query):
     ],
     [
         InlineKeyboardButton(text="Channel 🗣", url="https://t.me/SBS_Studio"),
-        InlineKeyboardButton(text="Rate ⭐️", url="https://t.me/tlgrmcbot?start=mykdrama_bot-review"),
     ],
     [
         InlineKeyboardButton(text="Download Subtitles 🎦", url="https://t.me/TGsubtitledownloadebot"),
